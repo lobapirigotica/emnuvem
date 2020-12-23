@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Database</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    
+    <header class="bg-light">
+        <h2 class="text-info">Usuários</h2>
+    </header>
+    <div class="container">
+        <div class="row bg-light shadow row-form">
+            <form>
+                <div class="mb-3">
+                    <label for="input-nome" class="form-label">Nome Completo</label>
+                    <input type="text" class="form-control" id="input-nome" aria-describedby="nomeAjuda" required>
+                    <div id="nomeAjuda" class="form-text">Informe seu nome completo</div>
+                  </div>
+                <div class="mb-3">
+                  <label for="input-email" class="form-label">Endereço de Email</label>
+                  <input type="email" class="form-control" id="input-email" aria-describedby="emailAjuda" required>
+                  <div id="emailAjuda" class="form-text">Informe seu endereço de email no padrão @email.com</div>
+                </div>
+                <div class="mb-3">
+                  <label for="input-senha" class="form-label">Senha</label>
+                  <input type="password" class="form-control" id="input-senha" required>
+                </div>
+
+            </form>
+            <div>
+                <button onclick="inserir()" class="btn btn-info text-light">Cadastrar</button>
+            </div>
+        </div>
+        <div class="row bg-light shadow row-form">
+            <h2 class="text-info">Usuários Cadastrados</h2>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#id</th>
+                    <th scope="col">Nome Completo</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Senha</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody id="tBody">
+        
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+<script src="./js/firebase.js"></script>
+<script src="./js/firestore.js"></script>
+
+</html>

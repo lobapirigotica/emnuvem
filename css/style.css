@@ -1,0 +1,16 @@
+header {
+
+    height: 60px;
+}
+
+header h2 {
+    position: relative;
+    left: 10%;
+    top: 10px;
+}
+
+
+.row-form {
+    margin-top: 50px;
+    padding: 30px;
+}
